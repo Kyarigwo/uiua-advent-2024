@@ -25,8 +25,8 @@ Safe ← ↧⊃StrictlyMonatonic SafeLimits Differences
 PartOne ← /+ ≡◇Safe
 
 # Generate all examples where on element deleted
-ProblemDamped ← ≡▽⊙¤¬⊞=.⇡⊸⧻
-
+ProblemDamped ← ≡▽⊙¤⊞≠.°⊏
+#  ×⊙¤⊞≠.°⊏
 # Safe if save or any damped safe
 DampedSafe ← ↥⊃(/↥≡Safe ProblemDamped) Safe
 
