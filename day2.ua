@@ -34,4 +34,5 @@ DampedSafe ← ↥⊃(/↥≡Safe ProblemDamped) Safe
 PartTwo ← /+≡◇DampedSafe
 
 Parse E
-PartTwo
+
+≡◇⧈-

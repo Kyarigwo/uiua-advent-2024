@@ -17,6 +17,7 @@ MDo   ← "do\\(\\)"
 MDont ← "don't\\(\\)"
 
 PartTwo ← (
+	# list showing values
   ⬚""regex $"_|_|_" MMul MDo MDont
   +×2 ∩≡◇≍ ¤"don't()"⊸:¤"do()" ≡°⊂
   ▽↘1⬚1\(⨬(∘|⋅1|⋅0):)
