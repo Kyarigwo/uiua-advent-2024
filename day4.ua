@@ -16,10 +16,14 @@ Find  ← /+♭≡⌕ ¤"XMAS"
 Skew  ← ⬚@ ≡(⊂≡⋅@ ⊚)°⊏
 Cross ← ⊡⊚↥⊸⇌⊞=.⇡3
 
-PartOne ← (
-  ⊃(∘|≡⇌|⍉|≡⇌ ⍉|⍉ Skew|≡⇌ ⍉ Skew|⍉ Skew ≡⇌|≡⇌ ⍉ Skew ≡⇌)
-  /+[∩₈Find]
+W ← /+[∩₄Find]⊃(∘|≡⇌|⍉|≡⇌ ⍉)
+
+V ← (
+  ♭₂⊟⊓⧈(⊡⊚⇌⊞=.⇡4) ⧈(⊡⊚⊞=.⇡4),,4_4
+  +∩/+⊃(≡≍ ¤"XMAS"|≡≍ ¤"SAMX")
 )
+
+PartOne ← +⊃V W
 
 ETwo ← $ .M.S......
        $ ..A..MSMS.
@@ -41,5 +45,4 @@ Targets ← (
 
 PartTwo ← /+♭⊞≍Targets♭₂ ⧈Cross 3_3
 
-Lines I
-PartTwo
+Lines E
