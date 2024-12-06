@@ -32,16 +32,27 @@ $ 61,13,29
 $ 97,13,75,29,47
 E ←
 
-RemoveNewlines ← ▽⊸≠@\n
-Lines          ← ≡⍚RemoveNewlines⊜□+1\+⊸⦷@\n
-DataParts      ← ∩°□°⊟⊜□≠0⊸≡◇⧻
-OrderCouples   ← ≡(⊜⋕⊸≠@|°□)
-Pages          ← ≡(□⊜⋕⊸≠@,°□)
-Parse          ← ⊓OrderCouples Pages DataParts Lines
-WellOrdered    ← ▽≡◇(¬/↥♭⊞≍/◇⊂⍜⇌⧅(□≡⊟¤°⊂⇌))⊸:¤≡⇌
-Middle         ← ⊡⌊÷2⊸⧻
+Split!   ← ⊜^0⊸≠
+InsertAt ← ⊂⊂⊃(↙ ⊙⋅∘|⋅∘|↘ ⊙⋅∘)
 
-E
-Parse
-# WellOrdered
-# /+≡◇Middle
+Sections ← °⊟⊜□¬⊸⦷ "\n\n" I
+
+L ← map⊓⊕⊢⊕□’⊸⊛°⊟⍉Split!(Split!⋕ @|)@\n°□⊙◌ Sections
+M ← Split!(□Split!⋕@,)@\n°□◌Sections
+
+Last         ← ⍜⇌°⊂
+IndexPage    ← ⊚ ∈°□⍣get[]⊙L
+CheckPage    ← =0⧻ IndexPage Last
+CheckManual  ← /↧⧅CheckPage
+CheckManuals ← ≡◇CheckManual
+
+Middle  ← ⊡⌊÷2⊸⧻
+Middles ← /+≡◇Middle
+
+FixPage   ← InsertAt⊢◡IndexPage Last
+FixPageN  ← ⊂⍢(FixPage|¬ CheckPage)⊃↙↘
+FixManual ← ∧FixPageN+1⇡⊸⧻
+
+PartOne ← Middles▽CheckManuals .M
+
+PartTwo ← Middles≡⍚FixManual ▽ ¬ CheckManuals .M
