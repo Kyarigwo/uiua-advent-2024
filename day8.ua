@@ -1,0 +1,36 @@
+# Experimental!
+
+I ← &fras "day-8-input.txt"
+
+$ ............
+$ ........0...
+$ .....0......
+$ .......0....
+$ ....0.......
+$ ......A.....
+$ ............
+$ ............
+$ ........A...
+$ .........A..
+$ ............
+$ ............
+E ←
+
+Rows         ← ⊜∘ ⊸≠@\n E
+Size         ← [⧻⊢⟜⧻]Rows
+Range        ← ⊂ ⊸¯⇡ ⧻ Rows
+Freqs        ← ◴⊡⊚⊸≠@. Rows
+MinVec       ← ÷∨⊸°⊟
+AntiNodes    ← ≡(+⊸-°⊟)⧅≠ 2⊚ = Rows
+AntiNodesTwo ← ◴ ♭₂ ≡(+× Range¤ MinVec⊃-⋅¤°⊟) ⧅< 2 ⊚ = Rows
+Inside       ← /↧⊂⊃≥₀(< Size)
+
+# PartOne ← ⧻◴/◇⊂≡(□▽⊸≡Inside AntiNodes) Freqs
+PartTwo ← ⧻◴/◇⊂≡(□▽⊸≡Inside AntiNodesTwo) Freqs
+
+# PartOne
+# Given two vectors, X_1 X_2, we want the smallest integer delta
+# such x_2 = n * delta + x_1 for some integer n
+# (x_2 - x_1) / n = delta -> what is the largest value of n? such
+# that delta is an integer.
+PartTwo
