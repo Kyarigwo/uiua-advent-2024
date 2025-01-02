@@ -38,21 +38,22 @@ MeanAbs₂ ← ÷⊃⧻ /+ ≡(⌵/-)⧅< 2≡C ⊏↙⌈÷5⊸⧻°⍆°⊏
 Inside  ← /↧↧⊃(> 54_42|< 86_72)
 Advance ← ◿ ¤ Size +×⊙⊸:
 PositionList ← (
-  ⊙(Advance 10000 ⊃≡⊢≡⊣⊙[]Parse):
+  ⊙(⊃≡⊢≡⊣⊙[]Parse):
   ◌◌⍥(⊃(⊙⋅∘|⊂ ¤ ⋅⊙⋅∘)≡◿ ¤ Size ◡+)
 )
 
 Set      ← ⍜⊡ ⋅1
 ToFrames ← ≡(↯ Size°⊚)
 
-⊃≡⊣≡⊢Parse I []
-⍥(⟜+⊙⟜(⊂/+≡Inside≡◿ ¤ Size)) 10000
-◌◌
-> 120 ⇌
-⊚
+⊃≡⊣≡⊢Parse E []
 
-⊃≡⊣≡⊢Parse I
-× 7847
-≡◿ ¤ Size +
-°⊚
-↯ Size
+# ⍥(⟜+⊙⟜(⊂/+≡Inside≡◿ ¤ Size)) 10000
+# ◌◌
+# > 120 ⇌
+# ⊚
+
+# ⊃≡⊣≡⊢Parse I
+# × 7847
+# ≡◿ ¤ Size +
+# °⊚
+# ↯ Size
